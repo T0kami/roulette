@@ -15,6 +15,7 @@
   justify-content: space-between;
   width: 90%;
   margin: auto;
+  align-items:center;
 }
 
 /* hide arrows in input numbers*/
