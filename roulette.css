@@ -9,6 +9,35 @@
   border:none;
 }
 
+.modal-body > .form-group{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+
+/* hide arrows in input numbers*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#min-serie, #super-serie{
+  border: none;
+  text-align: center;
+  font-weight:bold;
+}
+
+button[name=plus-button], button[name=minus-button]{
+  border-radius: 50px;
+  border: none;
+  margin: 5px;
+  background-color: #505050;
+  color: white;
+  height: 24px;
+  width: 24px;
+}
 
 /* The Modal (background) */
 .modal {
