@@ -11,6 +11,7 @@
   background-color: white;
   border:none;
   outline:none;
+  z-index:99999999;
 }
 
 /* ---------------------
