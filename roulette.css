@@ -46,6 +46,7 @@ button[name=plus-button], button[name=minus-button]{
   color: white;
   height: 24px;
   width: 24px;
+  outline:none;
 }
 
 /* Custom checkbox */
