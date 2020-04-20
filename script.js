@@ -71,13 +71,13 @@
     }
 
     function getRoulettes(){
-        let numberContainers = Array.from(document.querySelectorAll("[class^=recentNumbersContainer]"));
+        let numberContainers = document.querySelectorAll("[class^=recentNumbersContainer]");
         let roulettes = [];
 
         for(let container of numberContainers){
 
             let roulette = new Roulette(container.closest(".lobby-table-block"));
-            let numbers = Array.from(container.querySelectorAll("[class^=game-result]"));
+            let numbers = container.querySelectorAll("[class^=game-result]");
 
             for (let number of numbers){
                 let color = roulette.checkColor(number.classList.value);
@@ -127,6 +127,12 @@
             }
         }
 
+        for (const button of document.querySelectorAll("[name^=plus-button]")) {
+            button.addEventListener('click', increaseValue);
+        }
+        for (const button of document.querySelectorAll("[name^=minus-button]")) {
+            button.addEventListener('click', decreaseValue);
+        }
         //Events for inputs
         minInput.addEventListener('change', (e) => {
             GM.setValue("minSerie", parseInt(e.target.value));
@@ -136,18 +142,18 @@
         });
     }
 
-    function increaseValue(inputId) {
-        let value = parseInt(document.getElementById(inputId).value, 10);
+    function increaseValue(e) {
+        let value = parseInt(document.getElementById(e.previousSibling).value, 10);
         value = value > 9 ? 9 : value;
         value++;
-        document.getElementById(inputId).value = value;
+        document.getElementById(e.previousSibling).value = value;
     }
 
-    function decreaseValue(inputId) {
-        let value = parseInt(document.getElementById(inputId).value, 10);
+    function decreaseValue(e) {
+        let value = parseInt(document.getElementById(e.nextSibling).value, 10);
         value = value < 3 ? 3 : value;
         value--;
-        document.getElementById(inputId).value = value;
+        document.getElementById(e.nextSibling).value = value;
     }
 
     function main(){
