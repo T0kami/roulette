@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Roulette
 // @namespace    http://tampermonkey.net/
-// @version      0.1.5
+// @version      0.1.6
 // @description  Highlight series on roulette
 // @author       Tokami
 // @include      https://livecasino.oddsextra.com/*
