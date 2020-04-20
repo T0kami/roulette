@@ -37,10 +37,11 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.options-input{
+.options-input, .options-input:disabled{
   border: none;
   text-align: center;
   font-weight:bold;
+  background-color: white;
 }
 
 button[name=plus-button], button[name=minus-button]{
