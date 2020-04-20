@@ -14,7 +14,7 @@
         <label for="minSerie">Série minimum:</label>
         <div>
           <button type="button" name="minus-button">-</button>
-          <input type="number" id="min-serie" name="minSerie" min="2" max="10" value="6">
+          <input type="number" class="options-input name="minSerie" min="2" max="10" value="6">
           <button type="button" name="plus-button">+</button>
         </div>
       </div>
@@ -22,8 +22,15 @@
         <label for="superSerie">Super Série:</label>
         <div>
           <button type="button" name="minus-button">-</button>
-          <input type="number" id="super-serie" name="superSerie" min="2" max="10" value="9">
+          <input type="number" class="options-input" name="superSerie" min="2" max="10" value="9">
           <button type="button" name="plus-button">+</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <span>Les zéros cassent la série</span>
+        <div class="ckbx-style-11">
+           <input type="checkbox" id="ckbx-style-11" name="ignoreZero">
+           <label for="ckbx-style-11"></label>
         </div>
       </div>
     </div>
